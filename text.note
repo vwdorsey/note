@@ -1,0 +1,58 @@
+size<7,9>
+fontsize<12>
+
+#begin
+This is a test document for the Note markup language. It contains examples of how everything works for development and testing purposes.
+
+First, some symbols:
+#fi
+	#larrow - A left arrow
+	#rarrow - A right arrow
+	#barrow - A left/right arrow
+	#or - Logical OR
+	#and - Logical AND
+	#xor - Logical XOR
+	#true - Logical True
+	#false - Logical False
+	#forall - Math For All
+	#exists - Math There Exists
+#end_fi
+
+Now, some mathy type stuff:
+#fi
+	Here's a formula: #math A+B=C #end_math
+	And here's some multi-line math:
+	#math
+		alpha_[prime] = (x+1)(x^2+2)y^[32]
+	#end_math
+	And a fraction: #fraction(x+1,x-1+y)
+#end_fi
+
+And, finally, some text testing
+#fi
+	Subscripting - #sub(Hi,there)
+	Superscripting - #super(Like,this?)
+	#center
+	This is some centered text.
+	#end_center
+	#i Even more indent for your digestion.
+	#ul
+	Underlined this text.
+	#end_ul
+	#it
+	Italicized this text.
+	#end_it
+	#bf
+	Bolded this text.
+	#end_bf
+	Anyway, here is some more text for you to read. But, suddenly! #break It returns! And, before you know it, 
+	#Break
+	it's broken to the next page! Fancy, eh?
+	Now, the last thing we should do is look at some code.
+	#exact
+	Knockknock(){
+		print("I am knocking. Are you there?")
+	}
+	#end_exact
+#end_fi
+#end
