@@ -1,6 +1,6 @@
-package parser.rules;
+package TokenParser.Rules;
 
-public class LogicSyms {
+public class DocumentControl {
 
 	public String check(String input){
 		return "NOT IMPLEMENTED";

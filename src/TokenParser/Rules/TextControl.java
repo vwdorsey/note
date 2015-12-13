@@ -1,6 +1,6 @@
-package parser.rules;
+package TokenParser.Rules;
 
-public class Fonts {
+public class TextControl {
 
 	public String check(String input){
 		return "NOT IMPLEMENTED";

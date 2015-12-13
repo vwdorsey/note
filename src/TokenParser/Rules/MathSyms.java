@@ -1,6 +1,6 @@
-package parser.rules;
+package TokenParser.Rules;
 
-public class Modes {
+public class MathSyms {
 
 	public String check(String input){
 		return "NOT IMPLEMENTED";

@@ -1,11 +1,11 @@
-package document;
+package structures;
 
-public class command {
+public class Command {
 	private String name;
 	private String action;
 	private String[] args;
 	
-	public command(String n, String a, String[] r){
+	public Command(String n, String a, String[] r){
 		name = n;
 		action = a;
 		args = r;

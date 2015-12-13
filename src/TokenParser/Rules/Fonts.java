@@ -1,6 +1,6 @@
-package parser.rules;
+package TokenParser.Rules;
 
-public class MathSyms {
+public class Fonts {
 
 	public String check(String input){
 		return "NOT IMPLEMENTED";

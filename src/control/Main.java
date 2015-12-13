@@ -1,6 +1,11 @@
 package control;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+import ioFunctions.reader;
+import ioFunctions.writer;
 
 public class Main {
 
@@ -14,7 +19,19 @@ public class Main {
 		}
 		
 		File input = new File(args[0]);
-		System.out.println(input.getName());
+		String filename = input.getName().substring(0,input.getName().lastIndexOf('.'));
+		ArrayList<String> readfile;
+
+		try {
+			readfile = reader.readFile(input);
+			System.out.println("THe source file was read correctly.");
+		} catch (FileNotFoundException e) {
+			System.out.println("There was an error reading the file. Please make sure it exists and has proper syntax.");
+			return;
+		}
+		
+		writer.write(filename, readfile);
+		
 		return;
 	}
 
