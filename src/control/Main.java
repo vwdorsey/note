@@ -3,9 +3,12 @@ package control;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import ioFunctions.reader;
 import ioFunctions.writer;
+import structures.Document;
+import structures.Token;
 
 public class Main {
 
@@ -28,6 +31,14 @@ public class Main {
 		} catch (FileNotFoundException e) {
 			System.out.println("There was an error reading the file. Please make sure it exists and has proper syntax.");
 			return;
+		}
+		
+		Document doc = new Document(readfile);
+		doc.tokenize();
+		
+		HashMap<Integer, Token> temp = doc.getDocTokens();
+		for(Token t: temp.values()){
+			System.out.println(t.toString());
 		}
 		
 		writer.write(filename, readfile);

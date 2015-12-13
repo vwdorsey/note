@@ -31,4 +31,8 @@ public class Token {
 	public void setAction(Command action) {
 		this.interpretedCommand = action;
 	}
+	
+	public String toString(){
+		return id + " | " + type + " | " + content;
+	}
 }
