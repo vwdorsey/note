@@ -35,13 +35,10 @@ public class Main {
 		
 		Document doc = new Document(readfile);
 		doc.tokenize();
+		doc.parseTokens();
+		doc.assembleDoc();
 		
-		HashMap<Integer, Token> temp = doc.getDocTokens();
-		for(Token t: temp.values()){
-			System.out.println(t.toString());
-		}
-		
-		writer.write(filename, readfile);
+		writer.write(filename, doc.getStructure());
 		
 		return;
 	}

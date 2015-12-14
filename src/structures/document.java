@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Queue;
 
+import Generator.tex;
+import TokenParser.parser;
 import Tokenizer.tokenizer;
 
 public class Document {
@@ -38,8 +40,16 @@ public class Document {
 	public void tokenize(){
 		for(String s: source){
 			structure.add(tokenizer.process(s, DocTokens, nextTokenID));
-			System.out.println(structure.get(structure.size()-1));
 		}
-		
+		System.out.println("The Document was tokenized successfully.");
+	}
+	
+	public void parseTokens(){
+		parser.readTokens(DocTokens);
+		System.out.println("The Document's tokens have been read fully.");
+	}
+	
+	public void assembleDoc(){
+		structure = tex.assemble(structure, DocTokens);
 	}
 }

@@ -7,45 +7,39 @@ This is a test document for the Note markup language. It contains examples of ho
 
 First, some symbols:
 #fi#
-	#larrow# - A left arrow
-	#rarrow# - A right arrow
-	#barrow# - A left/right arrow
-	#or# - Logical OR
-	#and# - Logical AND
-	#xor# - Logical XOR
-	#true# - Logical True
-	#false# - Logical False
-	#forall# - Math For All
-	#exists# - Math There Exists
+	#larrow# - A left arrow #break#
+	#rarrow# - A right arrow #break#
+	#barrow# - A left/right arrow #break#
+	#or# - Logical OR #break#
+	#and# - Logical AND #break#
+	#xor# - Logical XOR #break#
+	#true# - Logical True #break#
+	#false# - Logical False #break#
+	#forall# - Math For All #break#
+	#exists# - Math There Exists #break#
 #end_fi#
 
 Now, some mathy type stuff:
 #fi#
-	Here's a formula: #math# A+B=C #end_math#
+	Here's a formula: #math# A+B=C #end_math# #break#
 	And here's some multi-line math:
 	#math#
 		alpha_[prime] = (x+1)(x^2+2)y^[32]
 	#end_math#
-	And a fraction: #fraction(x+1,x-1+y)#
+	And a fraction: #fraction(x+1,x-1+y)#  #break#
 #end_fi#
 
 And, finally, some text testing
 #fi#
-	Subscripting - #sub(Hi,there)#
-	Superscripting - #super(Like,this?)#
+	Subscripting - #sub(Hi,there)# #break#
+	Superscripting - #super(Like,this?)# #break#
 	#center#
-	This is some centered text.
+	This is some centered text. #break#
 	#end_center#
-	#i# Even more indent for your digestion.
-	#ul#
-	Underlined this text.
-	#end_ul#
-	#it#
-	Italicized this text.
-	#end_it#
-	#bf#
-	Bolded this text.
-	#end_bf#
+	#i# Even more indent for your digestion. #break#
+	Underlined #ul(this text)#.#break#
+	Italicized #it(this text)#.#break#
+	Bolded #bf(this text)#.#break#
 	Anyway, here is some more text for you to read. But, suddenly\! #break# It breaks\! And, before you know it, 
 	#Break#
 	it's broken to the next page\! Fancy, eh?

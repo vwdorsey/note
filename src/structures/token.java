@@ -4,7 +4,7 @@ public class Token {
 	private int id;
 	private String type;
 	private String content;
-	private Command interpretedCommand;
+	private String interpretedCommand;
 	
 	public Token(int i, String t, String c){
 		id = i;
@@ -24,11 +24,11 @@ public class Token {
 		return content;
 	}
 
-	public Command getAction() {
+	public String getAction() {
 		return interpretedCommand;
 	}
 	
-	public void setAction(Command action) {
+	public void setAction(String action) {
 		this.interpretedCommand = action;
 	}
 	

@@ -1,59 +1,56 @@
-%size<7,9>%
-%fontsize<12>%
+\documentclass[12pt]{article}
 
-#begin#
+\usepackage{changepage}
+\usepackage[total={7in, 9in}]{geometry}
+
+
+\begin{document}
 This is a test document for the Note markup language. It contains examples of how everything works for development and testing purposes.
-!Here's a comment. This shouldn't be visible in the LaTeX output.Isn't this exciting?\!!
+%Here's a comment. This shouldn't be visible in the LaTeX output.Isn't this exciting?\!
 
 First, some symbols:
-#fi#
-	#larrow# - A left arrow
-	#rarrow# - A right arrow
-	#barrow# - A left/right arrow
-	#or# - Logical OR
-	#and# - Logical AND
-	#xor# - Logical XOR
-	#true# - Logical True
-	#false# - Logical False
-	#forall# - Math For All
-	#exists# - Math There Exists
-#end_fi#
+\begin{adjustwidth}{4em}{0em}
+    $\leftarrow$ - A left arrow \newline
+    $\rightarrow$ - A right arrow \newline
+    $\leftrightarrow$ - A left/right arrow \newline
+    $\cup$ - Logical OR \newline
+    $\cap$ - Logical AND \newline
+    $\oplus$ - Logical XOR \newline
+    $\mathbf{T}$ - Logical True \newline
+    $\mathbf{F}$ - Logical False \newline
+    $\forall$ - Math For All \newline
+    $\exists$ - Math There Exists \newline
+\end{adjustwidth}
 
 Now, some mathy type stuff:
-#fi#
-	Here's a formula: #math# A+B=C #end_math#
-	And here's some multi-line math:
-	#math#
-		alpha_[prime] = (x+1)(x^2+2)y^[32]
-	#end_math#
-	And a fraction: #fraction(x+1,x-1+y)#
-#end_fi#
+\begin{adjustwidth}{4em}{0em}
+    Here's a formula: $ A+B=C $ \newline
+    And here's some multi-line math:
+    $
+        alpha_[prime] = (x+1)(x^2+2)y^[32]
+    $
+    And a fraction: $\frac{x+1}{x-1+y}$  \newline
+\end{adjustwidth}
 
 And, finally, some text testing
-#fi#
-	Subscripting - #sub(Hi,there)#
-	Superscripting - #super(Like,this?)#
-	#center#
-	This is some centered text.
-	#end_center#
-	#i# Even more indent for your digestion.
-	#ul#
-	Underlined this text.
-	#end_ul#
-	#it#
-	Italicized this text.
-	#end_it#
-	#bf#
-	Bolded this text.
-	#end_bf#
-	Anyway, here is some more text for you to read. But, suddenly\! #break# It breaks\! And, before you know it, 
-	#Break#
-	it's broken to the next page\! Fancy, eh?
-	Now, the last thing we should do is look at some code.
-	#exact#
-	Knockknock(){
-		print("I am knocking. Are you there?")
-	}
-	#end_exact#
-#end_fi#
-#end#
+\begin{adjustwidth}{4em}{0em}
+    Subscripting - Hi$_{there}$ \newline
+    Superscripting - Like$^{this?}$ \newline
+    \begin{center}
+    This is some centered text. \newline
+    \end{center}
+    \hspace{4em} Even more indent for your digestion. \newline
+    Underlined \underline{this text}.\newline
+    Italicized \textit{this text}.\newline
+    Bolded \textbf{this text}.\newline
+    Anyway, here is some more text for you to read. But, suddenly!\newline It breaks!And, before you know it, 
+    \clearpage
+    it's broken to the next page!Fancy, eh?
+    Now, the last thing we should do is look at some code.
+    \begin{verbatim}
+    Knockknock(){
+        print("I am knocking. Are you there?")
+    }
+    \end{verbatim}
+\end{adjustwidth}
+\end{document}
