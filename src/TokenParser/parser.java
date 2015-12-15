@@ -2,7 +2,6 @@ package TokenParser;
 
 import java.util.HashMap;
 
-import structures.Command;
 import structures.Token;
 import TokenParser.Rules.*;
 
@@ -65,6 +64,10 @@ public class parser {
 			}
 			else if(current.getType().equals("Comment")){
 				String match = current.getContent();
+				if(match.contains("\\")){
+					match = match.replace("\\", "");
+				}
+
 				current.setAction('%' + match);
 			}
 			else {

@@ -13,7 +13,7 @@ import structures.Token;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Note Interpreter v0.0.1 - Copyright 2015");
+		System.out.println("Note Interpreter v0.1.0 - Copyright 2015");
 
 		if(args.length == 0 || args.length > 1){
 			System.out.println("Invalid Parameters - Either too many given or not enough given");

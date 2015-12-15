@@ -5,7 +5,7 @@ public class DocumentControl{
 	public static String noArg(String input) {
 		if(input.equals("begin")) return "\\begin{document}";
 		else if(input.equals("end")) return "\\end{document}";
-		else if(input.equals("break")) return "\\newline";
+		else if(input.equals("break")) return "\\\\";
 		else if(input.equals("Break")) return "\\clearpage";
 		else return "NO-OP";
 	}

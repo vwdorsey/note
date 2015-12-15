@@ -24,7 +24,7 @@ Now, some mathy type stuff:
 	Here's a formula: #math# A+B=C #end_math# #break#
 	And here's some multi-line math:
 	#math#
-		alpha_[prime] = (x+1)(x^2+2)y^[32]
+		alpha_{prime} = (x+1)(x^2+2)y^{32}
 	#end_math#
 	And a fraction: #fraction(x+1,x-1+y)#  #break#
 #end_fi#
@@ -42,7 +42,7 @@ And, finally, some text testing
 	Bolded #bf(this text)#.#break#
 	Anyway, here is some more text for you to read. But, suddenly\! #break# It breaks\! And, before you know it, 
 	#Break#
-	it's broken to the next page\! Fancy, eh?
+	It's broken to the next page\! Fancy, eh?
 	Now, the last thing we should do is look at some code.
 	#exact#
 	Knockknock(){
